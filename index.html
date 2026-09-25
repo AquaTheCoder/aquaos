@@ -1,0 +1,205 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <div class="topbar">
+            <div class="brand">AQUA<span class="brand-highlight">OS</span></div>
+            <div id="clock"></div>
+
+        </div>
+
+        <main id="desktop">
+
+            <div class="app-icon" ondblclick="openWindow('aboutWindow')">
+                <div class="icon">💻</div>
+                <span>About</span>
+            </div>
+
+            <div class="app-icon" ondblclick="openWindow('projectsWindow')">
+                <div class="icon">📁</div>
+                <span>Projects</span>
+            </div>
+
+            <div class="app-icon" ondblclick="openWindow('terminalWindow')">
+                <div class="icon">⌘</div>
+                <span>Terminal</span>
+            </div>
+
+            <div class="app-icon" ondblclick="openWindow('notesWindow')">
+                <div class="icon">📝</div>
+                <span>Notes</span>
+            </div>
+
+            <div class="app-icon" ondblclick="openWindow('settingsWindow')">
+                <div class="icon">⚙️</div>
+                <span>Settings</span>
+            </div>
+
+            <div class="window" id="aboutWindow">
+                <div class="windowheader">
+                    <span class="headertext">About AquaOS</span>
+                    <div class="window-controls">
+                        <button onclick="minimizeWindow('aboutWindow')">-</button>
+                        <button onclick="closeWindow('aboutWindow')">X</button>
+                    </div>
+                </div>
+
+                <div class="windowcontent">
+                    <h2>AquaOS</h2>
+                    <p>A personal web-based operating system.</p>
+                    <p>Built with HTML, CSS and JavaScript.</p>
+                    <p>Designed and coded by Aqua</p>
+
+                    <hr>
+
+                    <p><strong>Features</strong></p>
+                    <ul>
+                        <li>Draggable windows</li>
+                        <li>Multiple applications</li>
+                        <li>Custom themes</li>
+                        <li>Terminal</li>
+                        <li>Local notes</li>
+                        <li>Live Clock</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="window" id="projectsWindow">
+                <div class="windowheader">
+                    <span class="headertext">Projects</span>
+                    <div class="window-controls">
+                        <button onclick="minimizeWindow('projectsWindow')">-</button>
+                        <button onclick="closeWindow('projectsWindow')">X</button>
+                    </div>
+                </div>
+
+                <div class="windowcontent">
+                    <h2>Projects</h2>
+
+                    <div class="project">
+                        <h3>AquaOS</h3>
+                        <p>This WebOS project.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Python Projects</h3>
+                        <p>Various Python programming projects of beginner levels.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Web Projects</h3>
+                        <p>Various web development projects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window terminal-window" id="terminalWindow">
+                <div class="windowheader">
+                    <span class="headertext">Terminal</span>
+                    <div class="window-controls">
+                        <button onclick="minimizeWindow('terminalWindow')">-</button>
+                        <button onclick="closeWindow('terminalWindow')">X</button>
+                    </div>
+                </div>
+
+                <div class="terminal-content" id="terminalOutput">
+                    <div>AquaOS Terminal</div>
+                    <div>Type <strong>help</strong> for a list of commands.</div>
+                    <br>
+                </div>
+
+                <div class="terminal-input-line">
+                    <span>aqu@aquaos:~$ </span>
+                    <input type="text" id="terminalInput" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="window" id="notesWindow">
+                <div class="windowheader">
+                    <span class="headertext">Notes</span>
+                    <div class="window-controls">
+                        <button onclick="minimizeWindow('notesWindow')">-</button>
+                        <button onclick="closeWindow('notesWindow')">X</button>
+                    </div>
+                </div>
+
+                <div class="windowcontent">
+                    <h2>Notes</h2>
+                    <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+
+                    <button class="save-button" onclick="saveNotes()">Save Notes</button>
+
+                    <span id="saveStatus"></span>
+                </div>
+            </div>
+
+            <div class="window" id="settingsWindow">
+                <div class="windowheader">
+                    <span class="headertext">Settings</span>
+                    <div class="window-controls">
+                        <button onclick="minimizeWindow('settingsWindow')">-</button>
+                        <button onclick="closeWindow('settingsWindow')">X</button>
+                    </div>
+                </div>
+
+                <div class="windowcontent">
+                    <h2>Settings</h2>
+                    <p>Choose your AquaOS desktop background.</p>
+
+                <div class="theme-buttons">
+
+                    <button onclick="setTheme('bg1')">
+                        BG1
+                    </button>
+
+                    <button onclick="setTheme('bg2')">
+                        BG2
+                    </button>
+
+                    <button onclick="setTheme('mono')">
+                        Monochrome
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taskbar">
+
+                <button class="start-button" onclick="openWindow('aboutWindow')">
+                    AQUAOS
+                </button>
+
+                <div class="taskbar-apps">
+
+                <button onclick="openWindow('aboutWindow')">
+                About
+                </button>
+
+                <button onclick="openWindow('projectsWindow')">
+                Projects
+                </button>
+
+                <button onclick="openWindow('terminalWindow')">
+                Terminal
+                </button>
+
+                <button onclick="openWindow('notesWindow')">
+                Notes
+                </button>
+
+                <button onclick="openWindow('settingsWindow')">
+                Settings
+                </button>
+
+            </div>
+            </div>
+        </main>
+
+            <script src="script.js"></script>
+    </body>
+</html>
