@@ -1,29 +1,24 @@
-# AquaOS 🌊
+# AquaOS 
 
-AquaOS is my personal web-based operating system built with HTML, CSS, and JavaScript.
+AquaOS is a imitation of windows but on web (in its early stages)
 
 ## Features
 
-- Desktop-style interface
-- Multiple draggable windows
-- Projects application
-- Built-in terminal
-- Notes app with local saving
-- Customizable desktop themes
-- Live clock
-- Minimize windows
-- Close windows
-- Theme and notes persistence using localStorage
-- Press Escape to close the active window
+- Saves notes locally
+- Draggable windows
+- Themes
+- Terminal with some commands
+- About app
+- Local time
 
 ## Themes
-AquaOS includes multiple desktop backgrounds:
-- BG1
-- BG2
-- Monochrome
-The selected theme is saved locally so it stays after refreshing the page.
 
-## Technologies
+3 Themes
+- Image 1
+- Image 2
+- Monotone color
+
+## Languages
 - HTML
 - CSS
 - JavaScript
