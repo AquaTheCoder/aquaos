@@ -1,6 +1,6 @@
-# AquaOS 
+# AquaOS
 
-AquaOS is a imitation of windows but on web (in its early stages)
+AquaOS is an imitation of Windows on the web. It is still in its early stages.
 
 ## Features
 
@@ -13,15 +13,18 @@ AquaOS is a imitation of windows but on web (in its early stages)
 
 ## Themes
 
-3 Themes
+3 themes:
+
 - Image 1
 - Image 2
-- Monotone color
+- Monochrome color
 
 ## Languages
+
 - HTML
 - CSS
 - JavaScript
 
 ## Author
+
 Made by Aqua
